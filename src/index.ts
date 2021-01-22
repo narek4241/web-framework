@@ -1,7 +1,9 @@
 import { User } from './models/User';
 
-// const user = new User({ id: 1 });
-// const user2 = new User({ name: 'new user' });
+const user = new User({ name: 'test eventing user' });
 
-// user.fetch();
-// user.save();
+user.events.on('click', () => {
+  console.log('click#1');
+});
+
+user.events.trigger('click');
