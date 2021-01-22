@@ -1,9 +1,12 @@
 {
   "users": [
     {
-      "name": "dbuser1",
-      "age": 21,
-      "id": 1
+      "id": 1,
+      "name": "updatedName"
+    },
+    {
+      "name": "savedUser1",
+      "id": 2
     }
   ]
 }
