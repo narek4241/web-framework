@@ -1,11 +1,16 @@
+// #note Testing Area
 import { User } from './models/User';
 
-const user = new User({ name: 'test user name' });
+const user = new User({ id: 3, name: 'newer name', age: 100 });
 
-console.log(user.get('name'));
+// user.on('change', () => {
+//   console.log('change detected');
+// });
 
-user.on('click', () => {
-  console.log('change#1');
-});
+// user.on('save', () => {
+//   console.log(user);
+// });
 
-user.trigger('click');
+// user.set({ name: 'name to save ' });
+// user.fetch();
+// user.save();
