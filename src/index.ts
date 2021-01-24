@@ -1,9 +1,5 @@
 import { User } from './models/User';
 
-const user = new User({ name: 'test eventing user' });
+const user = new User({ name: 'test user name' });
 
-user.events.on('click', () => {
-  console.log('click#1');
-});
-
-user.events.trigger('click');
+console.log(user.attributes.get('name'));
