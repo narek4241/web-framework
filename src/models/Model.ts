@@ -27,21 +27,14 @@ export class Model<T extends HasId> {
     private sync: Sync<T>
   ) {}
 
-  get get() {
-    return this.attributes.get;
-  }
+  // #note works as long as not init-ed in constructor (prev-ly done using getters) opt
+  get = this.attributes.get;
+  on = this.events.on;
+  trigger = this.events.trigger;
 
   set(update: T): void {
     this.attributes.set(update);
     this.events.trigger('change');
-  }
-
-  get on() {
-    return this.events.on;
-  }
-
-  get trigger() {
-    return this.events.trigger;
   }
 
   fetch(): void {

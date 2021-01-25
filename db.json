@@ -2,16 +2,18 @@
   "users": [
     {
       "id": 1,
-      "name": "updatedName"
+      "name": "user1",
+      "age": 20
     },
     {
-      "name": "savedUser1",
-      "id": 2
+      "id": 2,
+      "name": "user2",
+      "age": 20
     },
     {
       "id": 3,
-      "name": "newer name",
-      "age": 100
+      "name": "user3",
+      "age": 20
     }
   ]
 }
