@@ -10,6 +10,7 @@ export class Collection<T, K> {
   on = this.events.on;
   trigger = this.events.trigger;
 
+  // #task #findOut async-nity nuance workflow
   fetch(): void {
     axios.get(this.rootUrl).then((response: AxiosResponse) => {
       response.data.forEach((value: K) => {
