@@ -1,5 +1,5 @@
 import { User } from './models/User';
-import { UserForm } from './views/UserForm';
+import { UserEdit } from './views/UserEdit';
 
 const user = User.buildUser({ name: 'USER', age: 30 });
 
@@ -9,5 +9,6 @@ if (!root) {
   throw new Error('Root element not found');
 }
 
-const userForm = new UserForm(root, user);
-userForm.render();
+const userEdit = new UserEdit(root, user);
+
+userEdit.render();
