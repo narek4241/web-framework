@@ -6,6 +6,7 @@ export class UserForm extends View<User, UserProps> {
     return {
       'click:.button-set-age': this.onSetAgeClick,
       'click:.button-set-name': this.onSetNameClick,
+      'click:.button-save': this.onSaveClick,
     };
   }
 
@@ -23,17 +24,17 @@ export class UserForm extends View<User, UserProps> {
     this.model.set({ name });
   };
 
+  onSaveClick = (): void => {
+    this.model.save();
+  };
+
   template(): string {
     return `
     <div>
-      <h1>Template Here</h1>
-      <p>User Name: ${this.model.get('name')}</p>
-      <p>User Age: ${this.model.get('age')}</p>
-      <div>
-          <input value=${this.model.get('name')} />
-          <button class="button-set-name">Update Name</button>
-          <button class="button-set-age">Set Random Age</button>
-      </div>
+      <input placeholder="${this.model.get('name')}" />
+      <button class="button-set-name">Update Name</button>
+      <button class="button-set-age">Set Random Age</button>
+      <button class="button-save">Save User</button>
     </div>
   `;
   }
